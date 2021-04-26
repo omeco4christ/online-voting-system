@@ -23,11 +23,8 @@ public class User {
 	private String lastname;
 	private String email;
 	private String password;
-	private Integer phonenumber;
-	private String roles;
+	private String phonenumber;
 	private String ppsnumber;
-	private String photo;
-	private String validid;
 	private Set<Authority> authorities = new HashSet<>();
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -67,17 +64,11 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Integer getPhonenumber() {
+	public String getPhonenumber() {
 		return phonenumber;
 	}
-	public void setPhonenumber(Integer phonenumber) {
+	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
-	}
-	public String getRoles() {
-		return roles;
-	}
-	public void setRoles(String roles) {
-		this.roles = roles;
 	}
 	public String getPpsnumber() {
 		return ppsnumber;
@@ -85,18 +76,7 @@ public class User {
 	public void setPpsnumber(String ppsnumber) {
 		this.ppsnumber = ppsnumber;
 	}
-	public String getPhoto() {
-		return photo;
-	}
-	public void setPhoto(String photo) {
-		this.photo = photo;
-	}
-	public String getValidid() {
-		return validid;
-	}
-	public void setValidid(String validid) {
-		this.validid = validid;
-	}
+	
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER, mappedBy="user")
 	public Set<Authority> getAuthorities() {
 		return authorities;
@@ -104,5 +84,12 @@ public class User {
 	public void setAuthorities(Set<Authority> authorities) {
 		this.authorities = authorities;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", firstname=" + firstname + ", lastname=" + lastname
+				+ ", email=" + email + ", password=" + password + ", phonenumber=" + phonenumber + ", ppsnumber="
+				+ ppsnumber + ", authorities=" + authorities + "]";
+	}
+	
 	
 }

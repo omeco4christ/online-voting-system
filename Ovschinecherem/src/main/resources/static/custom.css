@@ -1,0 +1,32 @@
+.account2 {
+	background-color: #cccccc;
+}
+
+.box1 {
+	background-color: #fff;
+	height: 500px;
+	margin-top: 50px;
+	border-radius: 10px 0 0 10px;
+	border-right: 1px solid #000;
+}
+.box2 {
+	background-color: #fff;
+	height: 500px;
+	margin-top: 50px;
+	border-radius: 0 10px 10px 0;
+}
+.heading {
+	text-align: center;
+}
+.account {
+	text-align: center;
+	margin-top: 20px
+}
+.account1 {
+	text-align: center;
+	margin-top: 50px
+}
+.footer{
+	text-align: center;
+	margin-top: 20px;
+}

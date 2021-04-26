@@ -29,29 +29,26 @@ public class CustomSecurityUser extends User implements UserDetails{
 		this.setEmail(user.getEmail());
 		this.setPassword(user.getPassword());
 		this.setPhonenumber(this.getPhonenumber());
-		this.setPhoto(user.getPhoto());
 		this.setPpsnumber(user.getPpsnumber());
-		this.setRoles(user.getRoles());
 		this.setUsername(user.getUsername());
-		this.setValidid(user.getValidid());
 	}
 
 	@Override
 	public Set<Authority> getAuthorities() {
 		// TODO Auto-generated method stub
-		return this.getAuthorities();
+		return super.getAuthorities();
 	}
 
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
-		return this.getPassword();
+		return super.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return this.getUsername();
+		return super.getUsername();
 	}
 
 	@Override

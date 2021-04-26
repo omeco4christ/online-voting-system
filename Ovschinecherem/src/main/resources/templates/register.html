@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Register - Online Voting System</title>
+</head>
+<body>
+<h2>Register An Account</h2>
+<form action="" method="post">
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+First Name: <input type="text" th:field="${user.firstname}"/><br/>
+Last Name: <input type="text" th:field="${user.lastname}"/><br/>
+Email: <input type="email" th:field="${user.email}"/> <br/>
+Username: <input type="text" th:field="${user.username}"/><br/>
+Phone Number: <input type="tel" th:field="${user.phonenumber}"/><br/>
+PPS Number: <input type="text" th:field="${user.ppsnumber}"/><br/>
+Password: <input type="password" th:field="${user.password}"/><br/>
+Confirm Password: <input type="password" id="confirmPassword"/><br/><br/>
+<button type="submit">Register</button>
+</form>
+</body>
+</html>
