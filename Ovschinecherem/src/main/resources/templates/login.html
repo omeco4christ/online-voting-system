@@ -3,7 +3,7 @@
 <head>
 <title>Login - Online Voting System</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!-- <link th:href="@{static/custom.css}" rel="stylesheet"> -->
+<!-- <link th:href="@{custom.css}" rel="stylesheet"> -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script type="text/javascript">
 $(function (){
@@ -12,13 +12,48 @@ $(function (){
 	});
 });
 </script>
+<style type="text/css">
+.account2 {
+	background-color: #cccccc;
+}
+
+.box1 {
+	background-color: #fff;
+	height: 500px;
+	margin-top: 50px;
+	border-radius: 10px 0 0 10px;
+	border-right: 1px solid #000;
+}
+.box2 {
+	background-color: #fff;
+	height: 500px;
+	margin-top: 50px;
+	border-radius: 0 10px 10px 0;
+}
+.heading {
+	text-align: center;
+}
+.account {
+	text-align: center;
+	margin-top: 20px
+}
+.account1 {
+	text-align: center;
+	margin-top: 50px
+}
+.footer{
+	text-align: center;
+	margin-top: 20px;
+}
+
+</style>
 </head>
 <body class="account2">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-5 box1">
-			<!-- <img th:src="@{static/images/vote.jpg}" width="100%" height="500px"> -->
+			 <!-- <img src="images/vote.jpg" width="100%" height="500px" > -->
 			</div>
 			<div class="col-md-5 box2">
 				<form action="" method="post">
