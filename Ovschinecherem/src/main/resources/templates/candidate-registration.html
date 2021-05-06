@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
-<head>
-<title>Online Voting System</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!-- <link th:href="@{static/custom.css}" rel="stylesheet"> -->
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-$(function (){
-	$("#createAccount").click(function (){
-		window.location.href = "/register";
-	});
-	
-	$("#loginAccount").click(function (){
-		window.location.href = "/login";
-	});
-});
-</script>
-<style type="text/css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Candidate Registration - Online Voting System</title>
+    <style type="text/css">
       body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -90,8 +83,8 @@ $(function (){
   opacity: 1;
 }
     </style>
-</head>
-	<body>
+  </head>
+  <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="#">OVS</a>
@@ -123,8 +116,8 @@ $(function (){
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="loginAccount">Login</button> |
-      <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="createAccount">Register</button>
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -135,32 +128,66 @@ $(function (){
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Online Voting System</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper venenatis commodo. Curabitur congue aliquam leo eget aliquet. Sed eleifend, nibh sed volutpat efficitur, massa turpis ultrices magna, nec ornare enim ligula eu dui. Maecenas eu mollis erat, id porttitor est.</p>
-      <p><a class="btn btn-primary btn-lg" href="login" role="button">Pre-Election Registration &raquo;</a></p>
+      <h1 class="display-3">Candidate Registration</h1>
+      
+    
     </div>
   </div>
 
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-      <div class="col-md-4">
-        <h2>Political Parties</h2>
-        <p>Curabitur gravida mi lacus, id congue magna varius id. Praesent volutpat neque et efficitur ullamcorper. Morbi ac tempor leo, ut porttitor dui. Pellentesque scelerisque leo at eleifend euismod.</p>
-        <p><a class="btn btn-secondary" href="political-parties" role="button">View details &raquo;</a></p>
+      <div class="col-md-2">
+        
       </div>
-      <div class="col-md-4">
-        <h2>Political Candidates</h2>
-        <p>Aenean nec justo eget enim accumsan faucibus eget a urna. Suspendisse vulputate placerat lorem, non tempor dolor lobortis eget. Cras congue urna libero, ut ullamcorper eros convallis et.</p>
-        <p><a class="btn btn-secondary" href="political-candidates" role="button">View details &raquo;</a></p>
+      <div class="col-md-8">
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Candidate Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter name here">
+            </div>
+             <div class="form-group">
+              <label for="exampleFormControlInput1">Candidate Age</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter age here">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Candidate County</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter county here">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Candidate Political Party</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>UPP</option>
+                <option>APP</option>
+                <option>SDD</option>
+                <option>KAA</option>
+                <option>PIK</option>
+              </select>
+            </div>
+           <div class="form-group">
+              <label for="exampleFormControlInput1">Candidate Photo</label>
+              <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="enter photo here">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Candidiate Biography</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="enter Biography"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Candidiate Manifesto</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="enter Manifesto"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
       </div>
-      <div class="col-md-4">
-        <h2>Polling Units</h2>
-        <p>Fusce tempor ornare tellus, nec feugiat lorem imperdiet at. In aliquet, dui vel sagittis commodo, dolor mi elementum eros, vitae mattis ex erat at sem. Donec tincidunt tempor urna, in tempus dolor interdum eu.</p>
-        <p><a class="btn btn-secondary" href="polling-units" role="button">View details &raquo;</a></p>
+      <div class="col-md-2">
+        
       </div>
     </div>
-
+<br>
+<br>
+<br>
     <hr>
     <button class="open-button" onclick="openForm()">Chat</button>
 

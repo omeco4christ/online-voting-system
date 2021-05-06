@@ -21,4 +21,34 @@ public class DashboardController {
 	public String dashboard() {
 		return "dashboard";
 	}
+	
+	@GetMapping("/party-registration")
+	public String partyregistration() {
+		return "party-registration";
+	}
+	
+	@GetMapping("/candidate-registration")
+	public String candidateregistration() {
+		return "candidate-registration";
+	}
+	
+	@GetMapping("/voter-registration")
+	public String voterregistration() {
+		return "voter-registration";
+	}
+	
+	@GetMapping("/political-parties")
+	public String politicalparties() {
+		return "political-parties";
+	}
+	
+	@GetMapping("/political-candidates")
+	public String politicalcandidates() {
+		return "political-candidates";
+	}
+	
+	@GetMapping("/polling-units")
+	public String pollingunits() {
+		return "polling-units";
+	}
 }
