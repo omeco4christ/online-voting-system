@@ -9,6 +9,7 @@ import javax.persistence.Id;
 public class Party {
 	private Long id;
 	private String partyname;
+	private String abbrev;
 	private String partylogo;
 	private String description;
 	
@@ -36,5 +37,11 @@ public class Party {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getAbbrev() {
+		return abbrev;
+	}
+	public void setAbbrev(String abbrev) {
+		this.abbrev = abbrev;
 	}
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -95,30 +95,24 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="news.html">News</a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="political-candidates.html">Political Candidates</a>
-          <a class="dropdown-item" href="political-parties.html">Political Parties</a>
-          <a class="dropdown-item" href="polling-units.html">Polling Units</a>
+          <a class="dropdown-item" href="political-candidates">Political Candidates</a>
+          <a class="dropdown-item" href="political-parties">Political Parties</a>
+          <a class="dropdown-item" href="polling-units">Polling Units</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="contact">Contact</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <form action="/logout" method="post" class="form-inline my-2 my-lg-0">
+		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+	</form>
   </div>
 </nav>
 
@@ -171,11 +165,11 @@
               <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="enter photo here">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Candidiate Biography</label>
+              <label for="exampleFormControlTextarea1">Candidate Biography</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="enter Biography"></textarea>
             </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Candidiate Manifesto</label>
+              <label for="exampleFormControlTextarea1">Candidate Manifesto</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="enter Manifesto"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>

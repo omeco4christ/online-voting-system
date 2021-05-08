@@ -51,4 +51,79 @@ public class DashboardController {
 	public String pollingunits() {
 		return "polling-units";
 	}
+	
+	@GetMapping("/contact")
+	public String contact() {
+		return "contact";
+	}
+	
+	@GetMapping("/party-single")
+	public String partysingle() {
+		return "party-single";
+	}
+	
+	@GetMapping("/candidate-single")
+	public String candidatesingle() {
+		return "candidate-single";
+	}
+	
+	@GetMapping("/cast-vote")
+	public String castvote() {
+		return "cast-vote";
+	}
+	
+	@GetMapping("/election-results")
+	public String electionresults() {
+		return "election-results";
+	}
+	
+	@GetMapping("/election-board")
+	public String electionboard() {
+		return "election-board";
+	}
+	
+	@GetMapping("/ballot-box")
+	public String ballotbox() {
+		return "ballot-box";
+	}
+	
+	@GetMapping("/voters-certificate")
+	public String voterscertificate() {
+		return "voters-certificate";
+	}
+	
+	@GetMapping("/admin")
+	public String admin() {
+		return "admin";
+	}
+	
+	@GetMapping("/userspage")
+	public String userspage() {
+		return "userspage";
+	}
+	
+	@GetMapping("/create-polling-units")
+	public String createpollingunits() {
+		return "create-polling-units";
+	}
+	
+	@GetMapping("/registered-voters")
+	public String registeredvoters() {
+		return "registered-voters";
+	}
+	
+	@GetMapping("/create-election-type")
+	public String createelectiontype() {
+		return "create-election-type";
+	}
+	
+	@GetMapping("/contact-messages")
+	public String contactmessages() {
+		return "contact-messages";
+	}
+	
+	@GetMapping("/webcam")
+	public String webcam() {
+		return "webcam";
+	}
 }
