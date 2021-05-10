@@ -92,11 +92,6 @@ public class DashboardController {
 		return "voters-certificate";
 	}
 	
-	@GetMapping("/admin")
-	public String admin() {
-		return "admin";
-	}
-	
 	@GetMapping("/userspage")
 	public String userspage() {
 		return "userspage";
@@ -117,7 +112,7 @@ public class DashboardController {
 		return "create-election-type";
 	}
 	
-	@GetMapping("/contact-messages")
+	@GetMapping("contact-messages")
 	public String contactmessages() {
 		return "contact-messages";
 	}
