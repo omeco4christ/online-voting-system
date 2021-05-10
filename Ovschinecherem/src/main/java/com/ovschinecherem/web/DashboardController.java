@@ -1,8 +1,15 @@
 package com.ovschinecherem.web;
 
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ovschinecherem.domain.Party;
+import com.ovschinecherem.service.PartyService;
 
 @Controller
 public class DashboardController {
@@ -22,10 +29,7 @@ public class DashboardController {
 		return "dashboard";
 	}
 	
-	@GetMapping("/party-registration")
-	public String partyregistration() {
-		return "party-registration";
-	}
+	
 	
 	@GetMapping("/candidate-registration")
 	public String candidateregistration() {
@@ -36,11 +40,7 @@ public class DashboardController {
 	public String voterregistration() {
 		return "voter-registration";
 	}
-	
-	@GetMapping("/political-parties")
-	public String politicalparties() {
-		return "political-parties";
-	}
+	  
 	
 	@GetMapping("/political-candidates")
 	public String politicalcandidates() {
@@ -92,30 +92,7 @@ public class DashboardController {
 		return "voters-certificate";
 	}
 	
-	@GetMapping("/userspage")
-	public String userspage() {
-		return "userspage";
-	}
 	
-	@GetMapping("/create-polling-units")
-	public String createpollingunits() {
-		return "create-polling-units";
-	}
-	
-	@GetMapping("/registered-voters")
-	public String registeredvoters() {
-		return "registered-voters";
-	}
-	
-	@GetMapping("/create-election-type")
-	public String createelectiontype() {
-		return "create-election-type";
-	}
-	
-	@GetMapping("contact-messages")
-	public String contactmessages() {
-		return "contact-messages";
-	}
 	
 	@GetMapping("/webcam")
 	public String webcam() {

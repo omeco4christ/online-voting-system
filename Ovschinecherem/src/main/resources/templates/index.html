@@ -122,10 +122,16 @@ $(function (){
     <div sec:authorize="hasRole('ADMIN')">
     <a href="/admin" class="btn btn-outline-success my-2 my-sm-0">Admin</a>
 	</div>
-    <form action="/logout" method="post" class="form-inline my-2 my-lg-0">
+	<div sec:authorize="isAuthenticated()">
+	<form action="/logout" method="post" class="form-inline my-2 my-lg-0">
 		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
 	</form>
+	</div>
+	<div sec:authorize="!isAuthenticated()">
+	<a href="login" class="btn btn-outline-success my-2 my-sm-0">Login</a>
+	<a href="register" class="btn btn-outline-success my-2 my-sm-0">Register</a>
+	</div>
   </div>
 </nav>
 
@@ -137,7 +143,7 @@ $(function (){
     <div class="container">
       <h1 class="display-3">Online Voting System</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper venenatis commodo. Curabitur congue aliquam leo eget aliquet. Sed eleifend, nibh sed volutpat efficitur, massa turpis ultrices magna, nec ornare enim ligula eu dui. Maecenas eu mollis erat, id porttitor est.</p>
-      <p><a class="btn btn-primary btn-lg" href="login" role="button">Pre-Election Registration &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="voter-registration" role="button">Pre-Election Registration &raquo;</a></p>
     </div>
   </div>
 
