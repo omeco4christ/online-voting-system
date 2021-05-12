@@ -60,6 +60,15 @@ public class PartyController {
 	    return mav;
 	}
 	
+	@RequestMapping("/read/{id}")
+	public ModelAndView showReadPartyPage(@PathVariable(name = "id") int id) {
+		ModelAndView mavs = new ModelAndView("party-single");
+		Party party = partyService.get(id);
+		mavs.addObject("party", party);
+		
+		return mavs;
+	}
+	
 	@RequestMapping("/delete/{id}")
 	public String deleteParty(@PathVariable(name = "id") int id) {
 	    partyService.delete(id);

@@ -141,18 +141,20 @@
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-      <div class="col-md-4">
+   
+      <div class="col-md-4" th:each="candidate : ${listCandidates}">
         <div class="card" style="width: 18rem;">
+        <p th:text="${candidate.id}">Candidate Id</p>
           <img class="card-img-top" src="images/vote.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Candidate Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title" th:text="${candidate.candidatename}">Candidate Name</h5>
+            <p class="card-text" th:text="${#strings.abbreviate(candidate.candidatebio,50)}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Age: Cras justo odio</li>
-            <li class="list-group-item">County: Dapibus ac facilisis in</li>
+            <li class="list-group-item" th:text="${candidate.candidateage}">Age: Candidate Age</li>
+            <li class="list-group-item" th:text="${candidate.candidatecounty}">County: Candidate County</li>
             <li class="list-group-item">Office Contesting: Vestibulum at eros</li>
-            <li class="list-group-item">Party: Vestibulum at eros</li>
+            <li class="list-group-item" th:text="${candidate.candidateparty}">Party: Candidate Party</li>
           </ul>
           <div class="card-body">
             <a href="candidate-single" class="card-link">Read More &raquo;</a>
@@ -160,44 +162,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="images/vote.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Candidate Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Age: Cras justo odio</li>
-            <li class="list-group-item">County: Dapibus ac facilisis in</li>
-            <li class="list-group-item">Office Contesting: Vestibulum at eros</li>
-            <li class="list-group-item">Party: Vestibulum at eros</li>
-          </ul>
-          <div class="card-body">
-            <a href="candidate-single" class="card-link">Read More &raquo;</a>
-            <a href="candidate-single" class="card-link">Manifesto &raquo;</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="images/vote.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Candidate Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Age: Cras justo odio</li>
-            <li class="list-group-item">County: Dapibus ac facilisis in</li>
-            <li class="list-group-item">Office Contesting: Vestibulum at eros</li>
-            <li class="list-group-item">Party: Vestibulum at eros</li>
-          </ul>
-          <div class="card-body">
-            <a href="candidate-single" class="card-link">Read More &raquo;</a>
-            <a href="candidate-single" class="card-link">Manifesto &raquo;</a>
-          </div>
-        </div>
-      </div>
+      
+      
     </div>
 
     <hr>

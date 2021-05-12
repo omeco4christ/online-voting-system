@@ -1,15 +1,11 @@
 package com.ovschinecherem.web;
 
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ovschinecherem.domain.Party;
-import com.ovschinecherem.service.PartyService;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
 
 @Controller
 public class DashboardController {
@@ -41,11 +37,6 @@ public class DashboardController {
 		return "voter-registration";
 	}
 	  
-	
-	@GetMapping("/political-candidates")
-	public String politicalcandidates() {
-		return "political-candidates";
-	}
 	
 	@GetMapping("/polling-units")
 	public String pollingunits() {

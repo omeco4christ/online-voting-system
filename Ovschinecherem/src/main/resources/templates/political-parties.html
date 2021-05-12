@@ -147,7 +147,7 @@
           <div class="card-body">
             <h5 class="card-title" th:text="${party.partyname}">Party Name</h5><!--  | <p th:text="${party.abbrev}">Party Abbrev</p> -->
             <p class="card-text" th:text="${#strings.abbreviate(party.description,100)}">Party Description</p>
-            <a href="party-single" class="btn btn-info">Read More &raquo;</a>
+            <a href="@{'/read/' + ${party.id}" class="btn btn-info">Read More &raquo;</a>
             <a class="btn btn-primary" th:href="@{'/edit/' + ${party.id}}">Edit</a>
             <a class="btn btn-danger" th:href="@{'/delete/' + ${party.id}}">Delete</a>
           </div>
